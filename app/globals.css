@@ -350,3 +350,8 @@
 .PhoneInputInput::placeholder {
   color: #1a1d21;
 }
+
+.border-rad {
+  font-size: 40px !important;
+  border-radius: 10px !important;
+}
