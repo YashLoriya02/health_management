@@ -85,7 +85,7 @@
 
   /* ===== ADMIN */
   .admin-header {
-    @apply sticky top-3 z-20 mx-3 flex items-center justify-between rounded-2xl bg-dark-200 px-[5%] py-5 shadow-lg xl:px-12;
+    @apply sticky top-3 z-20 mx-3 flex items-center justify-between rounded-2xl bg-dark-400 px-[5%] py-5 shadow-lg xl:px-12;
   }
 
   .admin-main {
@@ -126,7 +126,8 @@
 
   /* Data Table */
   .data-table {
-    @apply z-10 w-full overflow-hidden rounded-lg border border-dark-400 shadow-lg;
+    box-shadow: 0px 0px 10px 2px rgba(94, 94, 94, 0.25);
+    @apply z-10 w-full overflow-hidden rounded-[10px];
   }
 
   .table-actions {
@@ -193,7 +194,7 @@
   }
 
   .shad-gray-btn {
-    @apply border border-dark-500 cursor-pointer bg-dark-400 text-white !important;
+    @apply border border-dark-500 rounded-[10px] cursor-pointer bg-dark-400 text-white !important;
   }
 
   .shad-input-label {
@@ -241,7 +242,7 @@
   }
 
   .shad-table {
-    @apply rounded-lg overflow-hidden !important;
+    @apply rounded-lg overflow-hidden p-3 !important;
   }
 
   .shad-table-row-header {
