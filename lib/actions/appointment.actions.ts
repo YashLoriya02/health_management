@@ -9,7 +9,7 @@ import {
   databases,
   messaging,
 } from "../appwrite.config";
-import { formatDateTime, parseStringify } from "../utils";
+import { parseStringify } from "../utils";
 
 //  Add Appointment
 export const createAppointment = async (
@@ -78,15 +78,6 @@ export const getRecentAppointmentList = async () => {
   }
 };
 
-//  Send Notification
-export const sendEmail = async (userId: string, content: string) => {
-  try {
-    // Send Email
-  } catch (error) {
-    console.error("An error occurred while sending sms:", error);
-  }
-};
-
 //  Update Appointment
 export const updateAppointment = async ({
   appointmentId,
@@ -103,11 +94,6 @@ export const updateAppointment = async ({
     );
 
     if (!updatedAppointment) throw new Error("Appointment not found");
-
-    // Integrate nodemailer and send confirmation / cancellation email
-
-    // const emailMessage = `Greetings from CarePulse. ${type === "schedule" ? `Your appointment is confirmed for ${formatDateTime(appointment.schedule!).dateTime} with Dr. ${appointment.primaryPhysician}` : `We regret to inform that your appointment for ${formatDateTime(appointment.schedule!).dateTime} is cancelled. Reason: ${appointment.cancellationReason}`}.`;
-    // await sendSMSNotification(userId, emailMessage);
 
     revalidatePath("/admin");
     return parseStringify(updatedAppointment);
